@@ -6,127 +6,65 @@
   <title>XueyaoZhang Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <style>
-    :root{
-      --bg: hsl(210 100% 98%);           /* 非常非常淡的蓝色背景 */
-      --card: #fff;
-      --ink: #0b1324;
-      --ink-2: #4b5563;
-      --brand: #2563eb;
-      --ring: rgba(37,99,235,.12);
-      --radius: 18px;
-      --shadow: 0 6px 24px rgba(20,40,90,.06), 0 1px 2px rgba(20,40,90,.05);
-      --grid-gap: 16px;
-      --container: 1040px;
-    }
-
-    /* 基础 */
-    *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color: var(--ink);
-      background: var(--bg);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background: hsl(210, 100%, 98%); /* 非常非常淡的蓝色 */
     }
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    /* 顶部横幅 */
     header{
-      background:#0f172a; color:#fff; padding:56px 20px;
+      padding:56px 24px;
+      text-align:center;
+      background:#111;
+      color:#fff
     }
-    .wrap{max-width:var(--container); margin:0 auto}
-    header h1{margin:0 0 6px;font-size:44px;letter-spacing:.5px}
+    header h1{margin:0 0 8px;font-size:40px}
     header p{margin:0;opacity:.8}
-
-    /* 主体容器 */
-    main{padding:32px 16px}
-    .stack{max-width:var(--container); margin:0 auto; display:grid; gap:24px}
-
-    /* 卡片 */
+    main{
+      max-width:960px;
+      margin:auto;
+      padding:32px 16px;
+      display:grid;
+      gap:16px
+    }
     .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      border:1px solid rgba(15,23,42,.06);
-      padding:22px 22px;
+      border:1px solid #eee;
+      border-radius:16px;
+      padding:20px;
+      background:#fff;
     }
-    .card h3{margin:0 0 10px}
-    .muted{color:var(--ink-2)}
-
-    /* 项目列表 */
-    .projects{
-      display:grid;
-      gap:22px;
+    .card h3{margin:0 0 8px}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .media{margin-top:12px;display:grid;gap:12px}
+    .media img,
+    .media video{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
     }
-    /* 单个项目：标题与标签、描述在左；媒体在下方。大屏时左右布局 */
-    .project{
-      display:grid;
-      gap:18px;
+    footer{
+      padding:32px 16px;
+      text-align:center;
+      color:#666
     }
-    @media (min-width:980px){
-      .project{
-        grid-template-columns: 1.15fr 1fr; /* 左右 */
-        align-items:start;
-      }
-    }
-    .project-head h4{margin:0 0 8px; font-size:22px}
-    .tags{display:flex; flex-wrap:wrap; gap:8px}
-    .tag{
-      font-size:12px; color:#1f2b46; background: #e8efff;
-      border:1px solid var(--ring);
-      padding:6px 10px; border-radius:999px;
-    }
-
-    /* 媒体网格：图片更规整，自动响应 */
-    .media{
-      display:grid; gap: var(--grid-gap);
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    }
-    .media img,.media video{
-      width:100%; height:auto; display:block; border-radius:14px;
-      background:#eef2ff; border:1px solid rgba(15,23,42,.06);
-    }
-    /* 单张主图时放大一点 */
-    .hero{
-      grid-column: 1 / -1;
-    }
-
-    /* 下载按钮 */
-    .actions{margin-top:8px; display:flex; gap:12px; flex-wrap:wrap}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      background:var(--brand); color:#fff; padding:10px 14px;
-      border-radius:12px; border:1px solid rgba(0,0,0,.05);
-      box-shadow: 0 8px 20px rgba(37,99,235,.18);
-      text-decoration:none; font-weight:600;
-    }
-    .btn:hover{filter:brightness(.97)}
-
-    footer{padding:38px 16px; text-align:center; color:#6b7280}
+    a{color:#0a66c2;text-decoration:none}
+    a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <h1>张雪瑶</h1>
-      <p>游戏 / 开发 / 策划</p>
-    </div>
+    <h1>张雪瑶</h1>
+    <p>游戏 / 开发 / 策划</p>
   </header>
-
-  
 
   <main>
     <section class="card">
       <h3>关于我</h3>
-      <p>张雪瑶 | 15242310906 | zxyao19@163.com</p>
+      <p>张雪瑶 | 15242310906 | zxyao19@163.com</p>
       <p>伦敦大学学院 (UCL) | 数字媒体生产 硕士 | 2024.09 - 2025.12 (预计)</p>
       <p>大连理工大学 | 数字媒体技术 (计算机类) 工学学士 | 2020.09 - 2024.06</p>
     </section>
 
-    
     <section class="card">
       <h3>项目</h3>
       <div class="grid">
@@ -135,19 +73,15 @@
           <h4>Shipping-肉鸽策略游戏</h4>
           <p>一款以婚介所为背景的模拟游戏，玩家通过分析客户需求与候选人特征完成匹配任务，管理金币与声誉等资源，逐步解锁更高难度的挑战。
             游戏核心玩法围绕任务匹配、资源管理与阶段推进，注重策略判断与数值平衡。</p>
-          <!-- 媒体：替换 src 为你的图片/视频地址 -->
           <div class="media">
-  <img src="assets/shipping.png" alt="Shipping 游戏主界面截图" loading="lazy" width="800">
-  <img src="assets/shipping1.png" alt="Shipping 游戏主界面截图" loading="lazy" width="500">
-  <img src="assets/shipping2.png" alt="Shipping 游戏主界面截图" loading="lazy" width="800">
-            <video src="assets/shipping-trailer.mp4" controls preload="metadata"></video>
-            
+            <img src="assets/shipping.png" alt="Shipping 游戏主界面截图">
+            <img src="assets/shipping1.png" alt="Shipping 游戏主界面截图">
+            <img src="assets/shipping2.png" alt="Shipping 游戏主界面截图">
+            <video src="assets/shipping-trailer.mp4" controls preload="metadata" poster="assets/shipping-poster.jpg"></video>
           </div>
-          <!-- 下载：替换为你的压缩包/可执行文件地址 -->
           <p style="margin-top:12px">
             <a href="downloads/Shipping-demo.zip" download>下载试玩（Windows）</a >
           </p >
-          
         </article>
         
         <article class="card">
@@ -182,7 +116,7 @@
     <section class="card">
       <h3>联系我</h3>
       <p><a href="mailto:zxyao19@163.com">Email: zxyao19@163.com</a></p>
-      </p><a href="#">Tel: 15242310906</a></p>
+      <p>Tel: 15242310906</p>
     </section>
   </main>
 
@@ -190,3 +124,4 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+

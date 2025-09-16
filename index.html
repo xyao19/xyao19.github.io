@@ -26,6 +26,30 @@
       display:grid;
       gap:16px
     }
+    /* 横排缩略图 + 悬停放大 */
+    .media-row{
+      display:flex;
+      gap:12px;
+      overflow-x:auto;     /* 超出时可左右拖动 */
+      overflow-y:visible;  /* 放大时不被裁切 */
+      padding-bottom:6px;
+    }
+    .media-row img{
+      flex:0 0 auto;       /* 不换行，单行排列 */
+      width:240px;         /* 缩略图宽度，可改为 200~300px */
+      height:auto;
+      border-radius:12px;
+      border:1px solid #eee;
+      background:#f5f7ff;
+      transition:transform .2s ease, box-shadow .2s ease;
+      transform-origin:center;   /* 放大基准 */
+      will-change:transform;
+    }
+    .media-row img:hover{
+      transform:scale(1.6);      /* 悬停放大 */
+      z-index:10;
+      box-shadow:0 16px 36px rgba(0,0,0,.25);
+    }
     .card{
       border:1px solid #eee;
       border-radius:16px;
@@ -73,10 +97,11 @@
           <h4>Shipping-肉鸽策略游戏</h4>
           <p>一款以婚介所为背景的模拟游戏，玩家通过分析客户需求与候选人特征完成匹配任务，管理金币与声誉等资源，逐步解锁更高难度的挑战。
             游戏核心玩法围绕任务匹配、资源管理与阶段推进，注重策略判断与数值平衡。</p>
-          <div class="media">
+          <div class="media-row">
             <img src="assets/shipping.png" alt="Shipping 游戏主界面截图">
             <img src="assets/shipping1.png" alt="Shipping 游戏主界面截图">
             <img src="assets/shipping2.png" alt="Shipping 游戏主界面截图">
+          <div class="media">  
             <video src="assets/shipping-trailer.mp4" controls preload="metadata" poster="assets/shipping-poster.jpg"></video>
           </div>
           <p style="margin-top:12px">
@@ -87,10 +112,11 @@
         <article class="card">
           <h4>For You-实验性游戏</h4>
           <p>交互与叙事实验，聚焦玩家选择与反馈回路。</p>
-          <div class="media">
+          <div class="media-row">
             <img src="assets/foryou.png" alt="For You 游戏画面">
             <img src="assets/foryou1.png" alt="For You 游戏画面">
             <img src="assets/foryou2.png" alt="For You 游戏画面">
+          <div class="media"> 
             <video src="assets/foryou-demo.mp4" controls preload="metadata"></video>
           </div>
           <p style="margin-top:12px">
